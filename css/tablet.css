@@ -1,0 +1,494 @@
+@import url(http://fonts.googleapis.com/css?family=Didact+Gothic);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(https://fonts.googleapis.com/css?family=Chewy);
+
+*{
+	font-family: 'Didact Gothic',sans-serif;
+	margin: 0;
+	padding: 0; 
+}
+
+
+/*Reglas deestilo basicas*/
+
+
+body{
+	/*background: #C0C0C0;*/
+	/*font-size: 22px;*/
+	line-height: 32px;
+	/*color: #ffffff;*/
+	margin: 0;
+	padding: 0;
+	 background: url(../img/fondo3.jpg) no-repeat center center fixed;
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	
+	
+}
+
+header{
+
+	/*width: 100%;
+	padding: 30px 0px;*/
+	/*background-color: #808080;*/
+}
+
+
+p{
+	margin: 19px;
+	font-size: 19px;
+	font-weight: bolder;
+	text-align: justify;
+}
+h1{
+	font-size: 1.3rem;
+	text-align: center;
+	color: white;
+	font-family: 'Indie Flower', cursive;
+
+}
+h1.titulo{
+	font-size: 1.3rem;
+	text-align: center;
+	color: gray;
+	font-family: 'Indie Flower', cursive;
+}
+h1.titulo2{
+	font-size: 1.9rem;
+	text-align: center;
+	color: black;
+	font-family: 'Indie Flower', cursive;
+	font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+
+label.toggle, [id^=drop]{
+	/*Oculto el icono con clase toggle y todos los checkbox cuyo id
+	comience con la cadena "drop"*/
+	display: none;
+}
+
+
+.menu{
+		/*oculto el menu de navegacion*/
+		display: none;
+	}
+
+
+
+
+
+
+/*Reglas de estilo basica para el menu*/
+nav{
+	margin: 0;
+	padding: 0;
+	/*background-color: #808080;*/
+	/*Obligo a que el nav cubra a los elementos que floten dentro de el*/
+}
+
+nav:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.logojpg{
+	width: 120px;
+	/*height: 35%;*/
+	float: left;
+	/*display: block;
+	padding: 0 30px;
+	float: left;
+	font-size: 20px;
+	line-height: 60px;*/
+}
+
+nav ul{
+	float: right;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: relative;
+}
+
+nav ul li{
+	margin: 0px;
+	display: inline-block;
+	float: left;
+	background-color: #333;
+}
+nav a{
+	display: block;
+	padding: 0 20px;
+	color: #FFF;
+	font-size: 20px;
+	line-height: 60px;
+	text-decoration: none;
+}
+
+
+nav ul ul{
+	display: none;
+	position: absolute;
+	top: 60px;
+}
+
+/*#imgDesc{
+	height: 50%;
+}*/
+
+/* Media Queris
+------------------------------------------ */
+
+/*@media all and (max-width: 768px) {*/
+	
+	/*MEDIA QUERY PARA TABLET Y SMARTPHONES
+	ESCRIBIR AQUI LAS REGLAS DE ESTILO RESTANTES DEL EJERCICIO*/
+
+	nav{
+		margin: 0;
+	}
+
+	#logo{
+		/*display: inline-block;
+		/*padding: 0 0 0 20px;*/
+		text-align: center;
+	}
+
+	nav ul li{
+		display: block;
+		width: 100%;
+		border-top: 1px solid white;
+	}
+
+	label.toggle{
+		display: block;
+		background-color: #333;
+		padding: 0 20px;
+		color: #FFF;
+		font-size: 20px;
+		line-height: 60px;
+		text-decoration: none;
+		border: none;
+		cursor: pointer;
+	}
+
+	label.icono{
+		background-color: rgba(0,0,0,0.3);
+		border-left: 1px solid white;
+		display: inline-block;
+		float: right;
+	}
+
+	.toggle:hover{ 
+		background-color: #000000;
+	}
+
+	.menu{
+		/*oculto el menu de navegacion*/
+		display: none;
+	}
+
+	[id^=drop]:checked + ul{
+		/*Muestro la lista adyacente al checkbox activo 
+		El checkbox debe tener un id que comience con "drop"*/
+		display: inline-block;
+		width: 100%;
+	}
+
+	.toggle + a{
+		display: none;
+	}
+
+	/*Para las listas de los niveles internos*/
+	nav ul ul{
+		float: none;
+		position: static;
+		color: #ffffff;
+	}
+
+	/*Para los elementos de los niveles internos*/
+	nav ul ul li{
+		display: block;
+		width: 100%;
+	}
+
+	/*Para los elementos del tercer nivel*/
+	nav ul ul ul li{
+		position: static;
+	}
+
+	/*Los niveles internos yan no se desplegaran cuando se haga hover sobre
+	el elemento padre dino solo cuando se active el checkbox*/
+	nav ul ul li:hover > ul,
+	nav ul li:hover > ul{
+		display: none;
+	}
+
+	/*Rellenos para los elementos del segundo nivel*/
+	nav ul ul .togglem,
+	nav ul ul a{
+		padding: 0 40px;
+	}
+
+	/*Rellenos para los elementos del tercer nivel*/
+	nav ul ul ul a{
+		padding: 0 80px;
+	}
+
+	nav a:hover,
+	nav ul ul ul a{
+		background-color: #000000;
+	}
+
+	nav ul li ul li .toggle,
+	nav ul ul a{
+		background-color: #212121;
+	}
+
+/*}*/
+
+
+
+
+/*SLIDE*/
+
+#pantallaini{
+	margin-left: 10%;
+	
+}
+
+#slider-container {
+    /*height: 100%;*/
+    margin-top: 20px;
+    margin: 0 auto;   
+    overflow: hidden ;
+    width: 100% ;
+}
+
+/*contenedor animado y con trasicion*/
+#slider-box {
+    -moz-animation: autoSlider 15s infinite linear;
+    -o-animation: autoSlider 15s infinite linear;
+    -webkit-animation: autoSlider 15s infinite linear;
+    animation: autoSlider 15s infinite linear;
+    -webkit-transition: all 0.75s linear;
+    -moz-transition: all 0.75s linear;
+    -ms-transition: all 0.75s linear;
+    -o-transition: all 0.75s linear;
+    transition: all 0.75s linear;
+    height: 100%;
+    width: 500% !important;
+}
+/*elementos que contiene el contenedor animado*/
+.element-cinco,.element-cuatro,.element-tres,.element-dos,.element-uno {
+    min-height: 300px;
+    max-height: 100%;
+    width: 100%;
+}
+.element-cinco img,.element-cuatro img,.element-tres img,.element-dos img,.element-uno img{
+    height: 405px;
+    width: 100%;
+    border-radius: 1%;
+}
+/*flotando las imagenes y dividiendo por 4 partes el contenedor animado*/
+.slider-element {
+    float: left;
+    width: 20%;
+}
+/*animacion para realizar efecto de auto-slider*/
+@-webkit-keyframes autoSlider {
+    0% {
+        margin-left: 0;
+    }
+    15%{
+      margin-left: 0;
+    }
+    30% {
+        margin-left: -100%;
+    }
+    40% {
+        margin-left: -100%;
+    }
+    65%{
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+    88%{
+      margin-left: -300%;
+    }
+    100% {
+        margin-left: -300%;
+    }
+}
+
+@-moz-keyframes autoSlider {
+    0% {
+        margin-left: 0;
+    }
+    15%{
+      margin-left: 0;
+    }
+    30% {
+        margin-left: -100%;
+    }
+    40% {
+        margin-left: -100%;
+    }
+    65%{
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+    88%{
+      margin-left: -300%;
+    }
+    100% {
+        margin-left: -300%;
+    }
+}
+
+
+
+/*contenido principal de las paginas------------------------------------------------------*/
+#content{
+	width: 95%;
+
+	/*margin: 0px auto;*/
+	margin: 2%;
+	/*clear: left;*/
+	background-color: rgba(244,244,244,0.29);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	border-radius: 6px;
+	}
+
+
+
+#contenido{
+	margin: 40px;
+	/*width: 960px;
+	margin: 0px auto;
+	/*clear: left;*/
+	width: 90%;
+	/*max-width: 1100px;
+	min-width: 700px;*/
+	/*padding: 10px;*/
+	/*margin: 30px;*/
+	column-count: 1;
+	column-gap: 10px;
+	-webkit-column-count:1;
+	-webkit-column-gap:10px;
+	-moz-column-count:1;
+	-moz-column-gap:10px;
+
+	
+}
+
+.lugar{
+	margin-top: 30px;
+	width: 80%;
+	/*margin-left: 50px;*/
+	padding: 20px;
+	/*margin-top: 25px;*/
+	background-color: white;
+	border: solid 1px black;
+	border-radius: 8px;
+	text-align: justify;
+	
+	
+}
+/*opacar las imagenes*/
+
+#imglugares{
+	width: 95%;
+	height: 95%;
+	margin: 2%;
+	opacity: 0.5;
+	transition: 2s;
+	-webkit-transition: 2s;
+
+}
+#imglugares:hover{
+	opacity: 1;
+	transition: 2s;
+	-webkit-transition: 2s
+}
+
+
+#contenido div:nth-child(3n+1){
+	margin-left: 0px;
+}
+
+#contenido div:nth-child(3n){
+	margin-right: 0px;
+}
+
+.boton{
+	background-color: black;
+	padding: 7px;
+	border-radius: 3px;
+	
+	margin-top: 10px;
+	font-size: .9em;
+	text-align: center;
+	
+}
+.restau{
+	text-decoration: none;
+	color: white;
+}
+
+
+
+
+/*Pie de pagina-----------------------------------------------------------------------------*/
+footer{
+	text-align: center;
+	margin: 0;
+	font-size: .9em;
+	line-height: 2;
+	clear: both;
+	background-color: #464d52;
+	color: white;
+	width: 100%;
+	padding-top: 5px;
+}
+
+
+/*otra pag------------------------------------------------------------------*/
+
+#M:hover{
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transition: 2s;
+	-webkit-transition: 2s;
+	background-color: black;
+	color: white;
+}
+
+#M{
+	margin: 8%;
+	padding: 5%;
+	background-color:#FAF3DD;
+	-webkit-border-radius: 0px 0px 10px 10px;
+	-moz-border-radius: 0px 0px 10px 10px;
+	border-radius: 0px 0px 10px 10px;
+}
+

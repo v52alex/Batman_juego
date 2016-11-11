@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Juego Batman</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scale=no">
+	<link rel="stylesheet" href="css/font-awesome.css">
+
+	<link rel="stylesheet" href="css/estilobase_m.css" media="screen and (min-width:769px)">
+
+	<link rel="stylesheet" href="css/tablet.css" media="screen and (min-width:481px) and (max-width:768px) ">
+
+	<link type="text/css" rel="stylesheet" href="css/movil.css" media="screen and (max-width:480px) ">
+
+   <!----> <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+ <!--<link rel="stylesheet" href="css/estilojuego.css">-->
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!--Manda a llamar al js-->
+<script type="text/javascript" src="js/juego.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstraptheme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="js/comentarios.js"></script>
+
+	
+</head>
+<body id="juego" onkeydown="whichButton(event)" onload="lienzo()">
+
+
+
+    <!--<script type="text/javascript">
+        $(document).ready(function () {
+            function init() {
+                if (localStorage["textnombre"]) {
+                    $('#textnombre').val(localStorage["textnombre"]);
+                }
+
+                if (localStorage["textpais"]) {
+                    $('#textpais').val(localStorage["textpais"]);
+                }
+
+                if (localStorage["textemail"]) {
+                    $('#textemail').val(localStorage["textemail"]);
+                }
+
+                if (localStorage["textcontenido"]) {
+                    $('#textcontenido').val(localStorage["textcontenido"]);
+                }
+            }
+            init();
+        });
+
+        $('.stored').keyup(function () {
+            localStorage[$(this).attr('textnombre')] = $(this).val();
+        });
+
+    </script>-->
+
+<header>
+	<nav>
+	<div id="logo"> <img class="logojpg" src="img/fondo1.jpg"></div>
+		<label for="drop" class="toggle icono" >
+
+			<i class="fa fa-bars" aria-hidden="true"></i>
+		</label>
+		<input type="checkbox" id="drop"/>
+		<ul class="menu">
+			<li><a href="index.html" >INICIO</a></li>
+			<li><a href="otra1.html" >REGLAS</a></li>
+			<li><a href="otra2.html" >CREADORES</a></li>
+			<li><a href="otra3.html" >JUEGO</a></li>
+			<li><a href="otra4.html" >PERSONAJES</a></li>
+			
+		</ul>
+	</nav>
+    
+<div id="imgDesc">
+ 	<article id="slider-container">
+
+
+		      
+         <!--caja para el juego-->
+         <section id="juego" onkeydown="whichButton(event)" onload="lienzo()">
+            <div class="containerju">
+
+                <a href="juego.html" >
+                <h1>Haz click para ir a jugar XD</h1>
+
+                    <img src="img/movimi.png" alt="ir a jugar" style=" width:100px; margin-left: 45%;">
+
+
+                    </a>
+
+                <!--<div class="page-header">
+ 
+                </div>
+                <!--<div class="row show-grid">
+     
+                    <div id="contenedorju" class="col-md-6" >
+                        <canvas id="imagenju" width="800px" height="500px">
+     
+                        </canvas>
+
+                        <img id="imaju" src="img/movimi.png" alt="movimiento" />
+ 
+                    </div>
+
+                </div>-->
+            </div>
+            
+        </section>
+
+
+		        
+    </article>
+
+ 	
+</div>
+
+    <div id="comentarios">
+
+        <!--Formulario-------------------------------------------->
+
+
+        <form class="form-horizontal">
+            
+            <fieldset>
+
+ <!-- Form Name -->
+
+ <legend></legend>
+ <!-- Text input-->
+
+
+ <div class="form-group">
+ <label class="col-md-4 control-label" for="textnombre">Nombre</label>
+ <div class="col-md-4">
+ <input id="textnombre" name="textnombre" type="text" placeholder="Nombre" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ]{1}[a-zA-ZáéíóúÁÉÍÓÚñÑ|\s]{4,45}$" title="Solo se aceptan letras  y cuenta con 5 a 46  caracteres para escribir su nombre Ejemplo:William Yohalmo PD:El espacio cuenta como caracter" class="form-control input-md" >
+ <span class="help-block">Ingrese su nombreo</span>
+ </div>
+ </div>
+
+
+     <div class="form-group">
+ <label class="col-md-4 control-label" for="textnombre">Pais</label>
+ <div class="col-md-4">
+ <input id="textpais" name="textnombre" type="text" placeholder="Pais" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ]{1}[a-zA-ZáéíóúÁÉÍÓÚñÑ|\s]{4,45}$" title="Solo se aceptan letras" class="form-control input-md">
+ <span class="help-block">Ingrese Pais</span>
+ </div>
+ </div>
+
+     <div class="form-group">
+ <label class="col-md-4 control-label" for="textnombre">Email</label>
+ <div class="col-md-4">
+ <input id="textemail"  name="textnombre" type="email" placeholder="Email" class="form-control input-md" required/>
+     <span class="help-block">Ingrese Email</span>
+ </div>
+ </div>
+
+ 
+
+
+
+
+ <!-- Textarea -->
+ <div class="form-group">
+ <label class="col-md-4 control-label" for="textcontenido">Comentario</label>
+ <div class="col-md-4">
+ <textarea class="form-control" id="textcontenido" name="textcontenido"></textarea>
+ </div>
+ </div>
+
+
+
+ <!-- Button -->
+ <div class="form-group">
+ <label class="col-md-4 control-label" for="singlebutton"></label>
+ <div class="col-md-4">
+ <input type="submit" id="btncomentar" name="btncomentar" class="btn btn-primary" value="Comentar">
+ </div>
+ </div>
+ </fieldset>
+ </form>
+    
+    </div>
+
+    <div id="Comentarios" class="container">
+ <h1>Comentarios</h1>
+ </div>
+
+</header>
+
+<img id="banner" src="img/banner.png">
+<section id="content">
+
+    			
+
+		</section>
+
+        <footer>
+			&copy; copyright. | All right reserved. | Juego batman 2016.
+		</footer>
+
+
+
+
+</body>
+</html>
